@@ -1,6 +1,6 @@
 # 🚀 Script de Automatización de Dominios en Nginx
 
-A menudo, el administrador de sistemas recibe solicitudes para desplegar "Landing Pages" o webs temporales, para ello es necesaria la creación de dominios en Nginx y su configuración. Sin embargo, un Administrador de sistemas debe ser capaz de automatizar este proceso para no perder el tiempo. 
+A menudo, el Administrador de Sistemas recibe solicitudes para desplegar webs temporales, para ello es necesaria la creación de dominios en Nginx y su configuración. Sin embargo, un Administrador de Sistemas debe ser capaz de automatizar este proceso para no perder el tiempo. 
 
 En este script se automatiza la creación de estructuras de directorios. Así como la generación del contenido web, la configuracion del Virtual Hosts, su activación y borrado completo del dominio cuando ya no es necesario.
 
