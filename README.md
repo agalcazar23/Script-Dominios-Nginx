@@ -16,7 +16,7 @@ Antes de ejecutar los scripts, asegúrate de cumplir con los siguientes requisit
 ```bash
 sudo apt update && sudo apt install build-essential curl -y
 ```
-2. Ambos scripts requieren permisos de superusuario `sudo` para modificar archivos en los directorios `/etc/nginx/` y `/var/www`. Dentro del HTML escribiremos la palabra REEMPLAZO donde queramos que aparezca el nombre del dominio. El comando `sed` cambiará esa palabra por el nombre real de cada dominio automáticamente.
+2. Ambos scripts requieren permisos de superusuario `sudo` para modificar archivos en los directorios `/etc/nginx/` y `/var/www`.
 
 3. En el mismo directorio donde se ubiquen los scripts, deben estar los archivos `dominios.csv`, `IP.csv` y `web.html` para su correcto funcionamiento.
 
@@ -28,7 +28,7 @@ sudo apt update && sudo apt install build-essential curl -y
 Primero, necesitaremos crear tres archivos clave que van a ser usados como variables para los scripts:
 
 * **`dominios.csv`**: Debe contener el nombre que queremos poner a los dominios.
-* **`web.html`**: Debe tener el contenido que queremos que se vea al abrir la web (para separarlos hay que..... no sé cómo hacerlo jajajajajjaja).
+* **`web.html`**: Debe tener el contenido que queremos que se vea al abrir la web. Dentro del HTML escribiremos la palabra REEMPLAZO donde queramos que aparezca el nombre del dominio. El comando `sed` cambiará esa palabra por el nombre real de cada dominio automáticamente.
 * **`IP.csv`**: Debe contener la IP de nuestro equipo local para que sea archivada en el directorio `/etc/hosts`. Así, al buscar el nombre de nuestro dominio, nos redirigirá correctamente hacia él.
 
 ### 2. Asignar permisos de ejecución
