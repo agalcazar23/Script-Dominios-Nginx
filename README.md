@@ -1,4 +1,4 @@
-# 🚀 Nginx VirtualHost Automator: Provisioning & De-provisioning
+# 🚀 Script de Automatización de Dominios en Nginx
 
 A menudo, el administrador de sistemas recibe solicitudes para desplegar "Landing Pages" o webs temporales, para ello es necesaria la creación de dominios en Nginx y su configuración. Sin embargo, un Administrador de sistemas debe ser capaz de automatizar este proceso para no perder el tiempo. 
 
@@ -18,13 +18,13 @@ Antes de ejecutar los scripts, asegúrate de cumplir con los siguientes requisit
 ```bash
 sudo apt update && sudo apt install build-essential curl -y
 ```
-2. Ambos scripts requieren permisos de superusuario `sudo` para modificar archivos en los directorios `/etc/nginx/` y `/var/www`.
+2. Ambos scripts requieren permisos de superusuario `sudo` para modificar archivos en los directorios `/etc/nginx/` y `/var/www`. Dentro del HTML escribiremos la palabra REEMPLAZO donde queramos que aparezca el nombre del dominio. El script usará el comando sed para cambiar esa palabra por el nombre real de cada dominio automáticamente.
 3. 
 4. En el mismo directorio donde se ubiquen los scripts, deben estar los archivos `dominios.csv`, `IP.csv` y `web.html` para su correcto funcionamiento.
 
 ---
 
-## Instrucciones
+## 📖 Instrucciones
 
 ### 1. Crear los archivos de configuración
 Primero, necesitaremos crear tres archivos clave que van a ser usados como variables para los scripts:
@@ -41,3 +41,19 @@ Ejemplo de cómo aplicar los permisos a ambos scripts:
 chmod +x CrearDominios.sh EliminarDominios.sh
 ```
 
+Para ejecutarlos será necesario el permiso de superusuario `sudo`.
+```bash
+sudo ./CrearDominios.sh
+```
+
+```bash
+sudo ./EliminarDominios.sh
+```
+
+¡Y todo listo! Ahora serás capaz de automatizar la creación de servidores en Nginx en tu laboratorio para tus prácticas personales.
+
+Los scripts están diseñados para que, si se ejecutan dos veces, no creen conflictos ni dupliquen líneas en el archivo `/etc/hosts`.
+
+-----
+
+**Este proyecto ha sido desarrollado por un estudiante de 1ºASIR que está introduciéndose en el mundo del scripting, gracias por leer :)**
