@@ -2,9 +2,7 @@
 
 A menudo, el Administrador de Sistemas recibe solicitudes para desplegar webs temporales, para ello es necesaria la creación de dominios en Nginx y su configuración. Sin embargo, un Administrador de Sistemas debe ser capaz de automatizar este proceso para no perder el tiempo. 
 
-En este script se automatiza la creación de estructuras de directorios. Así como la generación del contenido web, la configuracion del Virtual Hosts, su activación y borrado completo del dominio cuando ya no es necesario.
-
-
+En este script se automatiza la creación de estructuras de directorios, así como la generación del contenido web, la configuracion del Virtual Hosts, su activación y borrado completo del dominio cuando ya no es necesario.
 
 Es importante tener en cuenta que este script está diseñado principalmente para un entorno de laboratorio, simulando como lo haría en un entorno de trabajo real, pero no es adecuado para usar en un entorno profesional real. Esto debido a diferencias en los puertos, directorios y en la seguridad.
 
@@ -14,7 +12,7 @@ Es importante tener en cuenta que este script está diseñado principalmente par
 
 Antes de ejecutar los scripts, asegúrate de cumplir con los siguientes requisitos:
 
-1. Se deben las herramientas de `sed` y `tar` instaladas en nuestro equipo.
+1. Se deben tener las herramientas de `sed` y `tar` instaladas en nuestro equipo.
 ```bash
 sudo apt update && sudo apt install build-essential curl -y
 ```
